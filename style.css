@@ -734,6 +734,25 @@ th, td {
   .first-section-img div{
     width: 30%;
   }
+
+  .second-section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 150px;
+    position: absolute;
+    width: 100%;
+    height: fit-content;
+    margin: 10px 10px 10px 10px;
+  }
+  .second-section-div{
+    position:relative;
+  
+  }
+  .second-section img{
+    width: 100%;
+  }
 }
 
 
