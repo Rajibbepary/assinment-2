@@ -616,15 +616,170 @@ th, td {
   background:rgba(255, 255, 255, 0.1) ;
   height: 650px;
   margin-top: 50px;
+  position: relative;
 }
 
-.our-team-img img{
+.our-team-parent{
+  background-image: url(images/trainer1.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 90%;
+  width: 90%;
+  border-radius: 10px;
+  margin-left: 20px;
+  margin-top: 20px;
+  margin-bottom: -30px;
+  position: relative;
+}
+
+.our-team-parent-1{
+  background-image: url(images/trainer2.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 90%;
+  width: 90%;
+  border-radius: 10px;
+  margin-left:15px ;
+  margin-top: 20px;
+  margin-bottom: -30px;
+  position: relative;
+}
+
+.our-team-parent-2{
+  background-image: url(images/trainer3.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 90%;
+  width: 90%;
+  border-radius: 10px;
+  margin-left: 10px;
+  margin-top: 20px;
+  margin-bottom: -30px;
+  position: relative;
+}
+
+.our-team-parent-3{
+  background-image: url(images/trainer4.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 90%;
+  width: 90%;
+  border-radius: 10px;
+  margin-left: 10px;
+  margin-top: 10px;
+  margin-bottom: -30px;
+  position: relative;
+}
+
+.our-team-parent-4{
+  background-image: url(images/trainer5.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 90%;
+  width: 90%;
+  border-radius: 10px;
+  margin-left: 10px;
+  margin-top: 10px;
+  margin-bottom: -30px;
+  position: relative;
+}
+
+.our-team-parent-5{
+  background-image: url(images/trainer6.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 90%;
+  width: 90%;
+  border-radius: 10px;
+  margin-left: 10px;
+  margin-top: 10px;
+  margin-bottom: -30px;
+  position: relative;
+}
+
+.our-parent-child{
+position: absolute;
+margin-top: 220px;
+margin-left: 30px;
+color: white;
+}
+
+/* .our-team-parent img{
   width: 90%;
   height: 90%;
   border-radius: 10px;
   margin-left: 5px;
   margin-top: 20px;
   margin-bottom: -30px;
+} */
+
+.our-team-img > h3{
+  position: absolute;
+  bottom:0;
+  top: -50px;
+  left: 40px;
+  color: blue;
+  z-index:-1;
+}
+
+
+/* limits-forward-section-style */
+
+.limits-forward-section{
+  text-align: center;
+  margin-top: 100px;
+  width: 50%;
+}
+.limits-forward-section > h1{
+  font-size: 3rem;
+  font-weight: 900;
+  color: rgba(255, 255, 255, 0.886);
+}
+.limits-forward-section > p{
+  margin-top: 10px;
+  Font-size: 19px;
+Font-weight: 300;
+Line-height: 30px;
+color: rgb(156, 156, 156);
+}
+
+/* limits-forward-icon-section-style */
+
+.limits-forward-icon-section{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-gap: 5px;
+  margin-top:150px ;
+}
+.limits-forward-icon-section > div > h3{
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 24px;
+  color:rgba(255, 255, 255, 0.886) ;
+  transition: 0.1s;
+  margin-bottom: 20px;
+}
+.limits-forward-icon-section > div > span> i{
+  font-size: 4rem;
+  color:rgb(243, 78, 58) ;
+  margin-bottom: 20px;
+  margin-left: 50px;
+}
+
+.limits-forward-icon-section > div > P{
+    font-size: 1rem;
+    line-height: 27px;
+    font-weight: 300;
+    color:  rgb(156, 156, 156);
+}
+.limits-forward-icon-section > div > h3:hover {
+    color:rgb(243, 78, 58) ;
 }
 
 .footer-section{
@@ -826,6 +981,6 @@ th, td {
 }
   body{
     border: 2px dashed green;
-  }
+  } */
 
-  */
+ 
