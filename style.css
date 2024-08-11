@@ -4,6 +4,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap');
 
 
+
+
+
+
+
+
 body{
   font-family: "Inter", sans-serif;
   background-color: rgba(0, 0, 0, 0.925);
@@ -30,6 +36,9 @@ body{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    /* position: sticky;
+    top: 0;
+    right: 0; */
   }
   .logo{
     font-size: 2rem;
@@ -61,6 +70,11 @@ body{
     background-color: rgb(230, 83, 60);
   }
 
+  nav > .fa-solid{
+    font-size: 30px;
+    font-weight: 900;
+    display: none;
+  }
 
   /* header section style */
   .header-section{
@@ -137,6 +151,7 @@ body{
   background-size: cover;
   position: relative;
   margin-bottom: 100px;
+  /* z-index: 1; */
 }
 
 .header-btn{
@@ -187,6 +202,83 @@ body{
   font-weight: 900;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
+
+/* new-section-add */
+.work-list{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap:40px ;
+  margin-top: 50px;
+}
+.work{
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+}
+
+.work img{
+  width: 100%;
+  border-radius: 10px;
+  display: block;
+  transition: transform 0.5s;
+}
+
+.layer{
+  width: 100%;
+  height: 0;
+  background: linear-gradient(rgba(0,0,0,0.6), #ff004f);
+  border-radius: 10px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0 40px;
+  text-align: center;
+  font-size: 14px;
+  transition: height 0.5s;
+}
+.layer h2{
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+.layer a{
+  margin-top: 20px;
+  color: #ff004f;
+  text-decoration: none;
+  font-size: 18px;
+  line-height: 60px;
+  background: #fff;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  text-align: center;
+}
+.work:hover img{
+  transform: scale(1.1);
+}
+.work:hover .layer{
+  height: 100%;
+}
+.btn-see-more{
+  display: block;
+  margin: 50px auto;
+  width: fit-content;
+  border: 1px solid #ff004f;
+  padding: 14px 50px;
+  border-radius:6px ;
+  text-decoration: none;
+  color: #fff;
+  transition: background 0.5s;
+}
+.btn-see-more:hover{
+  background: #ff004f;
+}
+
+
 
 
 /* section-part-style */
@@ -261,7 +353,9 @@ body{
 .second-section img{
   width: 450px;
   margin-right: 30px;
-  border-radius: 20px;
+  border-radius:20px;
+  object-fit: none;
+  object-position: 70% 25%;
 }
 .btn-3{
   width: 224px;
@@ -493,7 +587,7 @@ body{
 
 
 .BMI-calculator{
-  width: auto;
+  width: 100%;
   height: 480px;
   margin-top: 100px;
   display: flex;
@@ -610,7 +704,8 @@ th, td {
 }
 .our-team-img{
   display: grid;
-  grid-template-columns:repeat(3, 1fr);
+  /* grid-template-columns:repeat(3, 1fr); */
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   grid-row: 10px;
   grid-column: 10px;
   background:rgba(255, 255, 255, 0.1) ;
@@ -787,9 +882,18 @@ color: rgb(156, 156, 156);
   height: 480px;
   background:rgba(255, 255, 255, 0.1) ;
   margin-top: 150px;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  /* display: grid;
+  grid-template-columns: repeat(3, 1fr); */
 }
+
+.footer-parent{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 5px;
+}
+
+
+
 .footer-div-1, .footer-div-2, .footer-div-3{
   margin-left: 150px;
   margin-top:100px ;
@@ -816,7 +920,35 @@ color: rgb(156, 156, 156);
   margin-top: 20px;
 }
 
+/* horizontal-center-style */
+.horizontal-center{
+  border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+  margin: auto;
+  width: 80%;
+  margin-top: 100px;
+}
+.last-part > p{
+  text-align: center;
+  margin-top: 30px;
+  font-size: 1.25rem;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+
+
+
 @media screen and (max-width:576px) {
+
+  nav > .fa-solid{
+    font-size: 1.50rem;
+    font-weight: 900;
+    display: block;
+  }
+
+  nav > ul > li{
+    display: none;
+  }
 
  .header-section{
   /* display: flex; */
@@ -827,12 +959,34 @@ color: rgb(156, 156, 156);
  }
 
 
+.header-text > h1{
+  font-size: 1.50rem;
+  font-weight: 800;
+}
+.header-text > p{
+  width: 20%;
+}
+.btn{
+  width: 50%;
+}
+.btn-1, .btn-2{
+  padding: 10px 15px;
+  font-size: 14px;
+}
+
  .header-img{
   margin-bottom: 300px;
   padding: 0;
+  margin: auto;
   position: relative;
+  /* float: left; */
  }
 
+ .banner-img{
+  margin: auto;
+  margin-left: 0;
+  margin-right: 90%;
+ }
  
  .btn-responsive-1{
   position: absolute;
@@ -846,7 +1000,11 @@ color: rgb(156, 156, 156);
   left: 25%;
  }
  
-  
+ .btn-responsive-2{
+  position: absolute;
+  top: 10%;
+  left: 25%;
+ }
   
 
 .first-section h1{
@@ -885,7 +1043,9 @@ color: rgb(156, 156, 156);
     width: 100%;
   }
 .Exercises-section{
-  margin-top: 750px;
+  margin-top: 700px;
+  margin-left: 40px;
+
 }
 .Exercises-section h1{
   font-size: 1.50 rem;
@@ -918,21 +1078,21 @@ color: rgb(156, 156, 156);
   margin-top: 10px;
   text-align: left;
   position: absolute;
-  width: auto;
+  width: 100%;
   height: auto;
+  margin-left: 30px;
 }
 .tabel-section{
-  width: 40%;
   text-align: left;
-  margin-right: 600px;
   position: relative;
   margin-top: 30px;
+  margin-left: 0px;
 }
 .form-section{
-  width: 40%;
   text-align: left;
-  margin-right: 600px;
   position: relative;
+  /* margin-right: 30px; */
+  margin-left: 20px;
 }
 .form{
   display: flex;
@@ -948,15 +1108,67 @@ color: rgb(156, 156, 156);
   padding: 15px 45px;
 }
 
+.Meet-Our-Team-section{
+  margin-top: 1000px;
+  text-align: left;
+}
+.our-team-text > h2{
+  font-size: 1.25rem;
+  margin-left: 40px;
+}
+.our-team-text >P{
+  margin-top: 10px;
+  width: 30%;
+  line-height: 23px;
+  margin-left: 40px;
+}
+
+.our-team-img{
+ display: grid;
+  grid-template-rows: 300px 300px 300px 300px 300px 300px;
+  position: absolute;
+  margin-top: 40px;
+  margin-left: 30px;
+  height: auto;
 }
 
 
+.limits-forward-section{
+  margin-top: 1200px;
+  text-align: left;
+}
 
-/* *{
+.limits-forward-section > h1{
+  font-size: 1.50rem;
+}
+
+.limits-forward-section > p{
+  font-size:1rem;
+}
+
+.limits-forward-icon-section{
+  margin-left: 40px;
+}
+
+.footer-section{
+  height: auto;
+  position: absolute;
+}
+
+.last-part{
+  margin-bottom: 30px;
+  position: relative;
+}
+
+
+}
+
+
+*{
   border: 1px solid red;
 }
   body{
     border: 2px dashed green;
-  } */
+  }
 
  
