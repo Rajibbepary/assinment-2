@@ -938,7 +938,7 @@ color: rgb(156, 156, 156);
 
 
 
-@media screen and (max-width:576px) {
+ @media screen and (max-width:576px) {
 
   nav > .fa-solid{
     font-size: 1.50rem;
@@ -951,7 +951,6 @@ color: rgb(156, 156, 156);
   }
 
  .header-section{
-  /* display: flex; */
   flex-direction: column;
   margin-bottom: 500px;
   margin-top: 10px;
@@ -979,7 +978,7 @@ color: rgb(156, 156, 156);
   padding: 0;
   margin: auto;
   position: relative;
-  /* float: left; */
+  
  }
 
  .banner-img{
@@ -1091,7 +1090,6 @@ color: rgb(156, 156, 156);
 .form-section{
   text-align: left;
   position: relative;
-  /* margin-right: 30px; */
   margin-left: 20px;
 }
 .form{
@@ -1163,12 +1161,3 @@ color: rgb(156, 156, 156);
 
 }
 
-
-*{
-  border: 1px solid red;
-}
-  body{
-    border: 2px dashed green;
-  }
-
- 
